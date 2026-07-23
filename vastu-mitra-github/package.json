@@ -1,0 +1,9 @@
+{
+  "name": "vastu-mitra",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pay-per-question Vastu Q&A website with Razorpay payments and Claude-generated answers",
+  "dependencies": {
+    "razorpay": "^2.9.4"
+  }
+}
