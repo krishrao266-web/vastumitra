@@ -5,6 +5,12 @@ module.exports = async (req, res) => {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  // TEMPORARY DIAGNOSTIC — remove after debugging
+  console.log('DEBUG key_id:', JSON.stringify(process.env.RAZORPAY_KEY_ID));
+  console.log('DEBUG key_id length:', process.env.RAZORPAY_KEY_ID?.length);
+  console.log('DEBUG key_secret length:', process.env.RAZORPAY_KEY_SECRET?.length);
+  console.log('DEBUG key_secret first/last char codes:', process.env.RAZORPAY_KEY_SECRET?.charCodeAt(0), process.env.RAZORPAY_KEY_SECRET?.charCodeAt(process.env.RAZORPAY_KEY_SECRET.length - 1));
+
   try {
     const razorpay = new Razorpay({
       key_id: process.env.RAZORPAY_KEY_ID,
